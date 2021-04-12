@@ -1,4 +1,4 @@
-# azuredevops-agents
+# Azure Devops Agents
 Windows and Ubuntu images for azure devops agents.
 
 ## windows
