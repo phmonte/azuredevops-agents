@@ -10,12 +10,32 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
+- script: Build and Push docker image
+  displayName: 'Build and Push docker image'
 
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
+- task: Docker@2
+  inputs:
+    containerRegistry: 'Docker Hub'
+    command: 'login'
 
+- task: Docker@2
+  displayName: Build and Push
+  inputs:
+    containerRegistry: 'Docker Hub'
+    repository: 'phmonte/azdevops-agent-ubuntu1804-python-cache'
+    command: 'buildAndPush'
+    Dockerfile: '**/Dockerfile'
+    tags: |
+      $(Build.BuildId)
+      latest
 
+- task: Docker@2
+  displayName: Build and Push
+  inputs:
+    containerRegistry: 'Docker Hub'
+    repository: 'phmonte/azdevops-agent-win-python-cache'
+    command: 'buildAndPush'
+    Dockerfile: '**/Dockerfile'
+    tags: |
+      $(Build.BuildId)
+      latest
