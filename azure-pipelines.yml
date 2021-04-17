@@ -17,7 +17,6 @@ steps:
   inputs:
     script: |
       echo Write your commands here
-      
       dir
 - task: Docker@2
   inputs:
