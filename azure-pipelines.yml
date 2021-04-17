@@ -11,11 +11,34 @@ pool:
 
 
 steps:
-- script: Build and Push docker image
-  displayName: 'Build and Push docker image'
-
 - task: CmdLine@2
   inputs:
     script: |
       echo Write your commands here
       dir
+- task: Docker@2
+  inputs:
+    containerRegistry: 'Docker Hub CS'
+    command: 'login'
+
+- task: Docker@2
+  displayName: Build and Push
+  inputs:
+    containerRegistry: 'Docker Hub CS'
+    repository: 'phmonte/azdevops-agent-ubuntu1804-python-cache'
+    command: 'buildAndPush'
+    Dockerfile: '**/ubuntu1804/Dockerfile'
+    tags: |
+      $(Build.BuildId)
+      latest
+
+- task: Docker@2
+  displayName: Build and Push
+  inputs:
+    containerRegistry: 'Docker Hub CS'
+    repository: 'phmonte/azdevops-agent-win-python-cache'
+    command: 'buildAndPush'
+    Dockerfile: '**/Dockerfile'
+    tags: |
+      $(Build.BuildId)
+      latest
