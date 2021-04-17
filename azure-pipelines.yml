@@ -38,7 +38,7 @@ steps:
     containerRegistry: 'Docker Hub CS'
     repository: 'phmonte/azdevops-agent-win-python-cache'
     command: 'buildAndPush'
-    Dockerfile: '**/Dockerfile'
+    Dockerfile: '**/windows2019/Dockerfile'
     tags: |
       $(Build.BuildId)
       latest
