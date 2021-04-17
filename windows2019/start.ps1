@@ -61,6 +61,7 @@ try
     --replace
   
   Write-Host "5. Running Azure Pipelines agent..." -ForegroundColor Cyan
+  New-Item -Path "C:\azp\agent\_work\_tool\Python\3.8.0" -Name "x64.complete" -ItemType "file"
   .\run.cmd
 }
 finally
