@@ -11,7 +11,7 @@ RUN powershell.exe -Command \
     wget https://www.python.org/ftp/python/3.8.0/python-3.8.0-amd64.exe -OutFile c:\python-3.8.0.exe
 
 RUN powershell.exe -Command c:\python-3.8.0.exe /quiet InstallAllUsers=0 PrependPath=1 Include_test=0 TargetDir=C:\azp\agent\_work\_tool\Python\3.8.0\x64
-RUN powershell.exe New-Item -Path C:\azp\agent\_work\_tool\Python\3.8.0 -Name x64.complete -ItemType file
+#RUN powershell.exe New-Item -Path C:\azp\agent\_work\_tool\Python\3.8.0 -Name x64.complete -ItemType file
 
 ##chocolatey
 RUN powershell -Command Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
