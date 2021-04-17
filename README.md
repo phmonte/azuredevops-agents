@@ -1,6 +1,8 @@
 # Azure Devops Agents
 Windows and Ubuntu images for azure devops agents.
 
+[![Build Status](https://phmonte.visualstudio.com/AzureDevopsAgents/_apis/build/status/phmonte.azuredevops-agents?branchName=main)](https://phmonte.visualstudio.com/AzureDevopsAgents/_build/latest?definitionId=13&branchName=main)
+
 ## windows
 Installations:
 - Python 3.8.0 - works with the python task "Use Python" (https://docs.microsoft.com/en-us/azure/devops/pipelines/tasks/tool/use-python-version?view=azure-devops)
