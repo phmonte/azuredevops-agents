@@ -24,7 +24,7 @@ steps:
     containerRegistry: 'Docker Hub CS'
     repository: 'phmonte/azdevops-agent-ubuntu1804-python-cache'
     command: 'buildAndPush'
-    Dockerfile: '**/Dockerfile'
+    Dockerfile: '**/**/Dockerfile'
     tags: |
       $(Build.BuildId)
       latest
