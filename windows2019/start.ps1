@@ -19,6 +19,8 @@ if ((Test-Path Env:AZP_WORK) -and -not (Test-Path $Env:AZP_WORK)) {
   New-Item $Env:AZP_WORK -ItemType directory | Out-Null
 }
 
+New-Item "\azp\agent" -ItemType directory | Out-Null
+
 # Let the agent ignore the token env variables
 $Env:VSO_AGENT_IGNORE = "AZP_TOKEN,AZP_TOKEN_FILE"
 
