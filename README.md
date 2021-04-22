@@ -9,6 +9,10 @@ Installations:
 
 - .NET Core SDK last LTS version (currently 3.1)
 
+- Git 2.31.1
+
+- Chocolatey (https://chocolatey.org/install.ps1)
+
 Example:
 docker run -e AZP_URL=YOUR_URL_HERE -e AZP_TOKEN=YOUR_TOKEN_HERE -e AZP_AGENT_NAME=YOUR_AGENT_NAME phmonte/azdevops-agent-win-python-cache:latest
 
