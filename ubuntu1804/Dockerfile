@@ -18,6 +18,14 @@ RUN apt-get update \
         netcat \
         libssl1.0
 
+#pwsh
+RUN apt-get install -y wget apt-transport-https software-properties-common
+RUN wget -q https://packages.microsoft.com/config/ubuntu/18.04/packages-microsoft-prod.deb
+RUN dpkg -i packages-microsoft-prod.deb
+RUN apt-get update
+RUN add-apt-repository universe
+RUN apt-get install -y powershell
+
 WORKDIR /azp
 
 COPY ./start.sh .
