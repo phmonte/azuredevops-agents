@@ -22,5 +22,7 @@ Installations:
 
 - .NET Core SDK 5.0
 
+- Powershell 7.1.3-1
+
 Example:
 docker run -e AZP_URL=YOUR_URL_HERE -e AZP_TOKEN=YOUR_TOKEN_HERE -e AZP_AGENT_NAME=YOUR_AGENT_NAME phmonte/azdevops-agent-ubuntu1804-python-cache:latest
