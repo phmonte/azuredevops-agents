@@ -16,7 +16,8 @@ RUN apt-get update \
         libicu60 \
         libunwind8 \
         netcat \
-        libssl1.0
+        libssl1.0 \
+        libc-dev-bin
 
 #pwsh
 RUN apt-get install -y wget apt-transport-https software-properties-common
