@@ -26,6 +26,8 @@ RUN dpkg -i packages-microsoft-prod.deb
 RUN apt-get update
 RUN add-apt-repository universe
 RUN apt-get install -y powershell
+RUN apt-get install python3.8 python3.8-dev python3.8-venv
+RUN apt-get install python3-venv
 
 WORKDIR /azp
 

@@ -26,8 +26,6 @@ rm -rf /azp/agent
 mkdir /azp/agent
 cd /azp/agent
 
-apt-get install python3.8 python3.8-dev python3.8-venv
-apt-get install python3-venv
 cd ..
 cd ..
 mkdir _work
