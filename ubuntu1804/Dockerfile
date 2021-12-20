@@ -28,6 +28,10 @@ RUN add-apt-repository universe
 RUN apt-get install -y powershell
 RUN apt-get install python3.8 python3.8-dev python3.8-venv
 RUN apt-get install python3-venv
+RUN wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+RUN apt install ./google-chrome-stable_current_amd64.deb
+RUN apt-get update
+RUN apt-get install g++ build-essential
 
 WORKDIR /azp
 
